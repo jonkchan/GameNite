@@ -1,0 +1,9 @@
+<h1><%= @category %></h1>
+
+<ul>
+    <% @boardgames.each do |bg| %>
+        <li>
+            <%= bg["name"] %>
+        </li>
+    <% end %>
+</ul>
