@@ -1,0 +1,10 @@
+<h1>Boardgame Categories</h1>
+<%= @category %>
+
+<ul>
+    <% @categories.each do |category| %>
+        <li>
+            <%= link_to category["name"], "/categories/#{category["name"]}" %>
+        </li>
+    <% end %>
+</ul>

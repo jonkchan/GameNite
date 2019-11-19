@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Boardgame Index</h1>
+
+    <ul>
+        <% @data.each do |bg| %>
+            <li>
+                <p><%= bg["name"] %></p>
+                <p>Min Players: <%= bg["min_players"] %></p> 
+                <p>Max Players: <%= bg["max_players"] %></p> 
+                <p>Min Playtime: <%= bg["min_playtime"] %></p> 
+                <p>Max Playtime: <%= bg["max_playtime"] %></p>
+                <p>Description: <%= bg["description"].content.html_safe %></p>
+            </li>
+        <% end %>
+    </ul>
+</div>
