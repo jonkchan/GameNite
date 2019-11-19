@@ -1,9 +1,16 @@
-<h1>Boardgame Categories</h1>
+<div class="container">
 
-<ul>
-    <% @categories.each do |category| %>
-        <li>
-            <%= link_to category["name"], "/categories/#{category["id"]}" %>
-        </li>
-    <% end %>
-</ul>
+    <div class="row">
+        <div class="col">
+            <h1>Boardgame Categories</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <% @categories.each do |category| %>
+            <div class="col-4">
+                <%= link_to category["name"], "/categories/#{category["id"]}" %>
+            </div>
+        <% end %>
+    </div>
+</div>
