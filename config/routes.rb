@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'boardgames#about'
 
+  get 'users', to: 'user#index'
   get 'users/:username', to: 'users#show'
 
   root 'boardgames#index'
