@@ -1,9 +1,16 @@
-<h1><%= @category %></h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1><%= @category %></h1>
+        </div>
+    </div>
 
-<ul>
-    <% @boardgames.each do |bg| %>
-        <li>
-            <%= bg["name"] %>
-        </li>
-    <% end %>
-</ul>
+    <div class="row">
+        <% @boardgames.each do |bg| %>
+            <div class="col-lg">
+                <img src=<%= bg["images"]["small"] %>>
+                <%= link_to bg["name"], "/boardgames/#{bg["id"]}" %>
+            </div>
+        <% end %>
+    </div>
+</div>
