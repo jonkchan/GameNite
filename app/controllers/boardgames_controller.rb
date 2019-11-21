@@ -1,8 +1,8 @@
 class BoardgamesController < ApplicationController
 
   def index
-    boardgame_object = Boardgame.new("Splendor")
-    @data = boardgame_object.get_details
+    response = HTTParty.get('https://www.boardgameatlas.com/api/search?order_by=popularity&client_id=' + ENV['CLIENT_ID'])
+    @boardgames = response["games"]
   end
 
   # Route to display all categories

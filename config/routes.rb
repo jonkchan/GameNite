@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 	resources :users
-	
-	# get 'boardgame/index'
-	# resources :boardgame
+
+	get 'boardgames', to: 'boardgames#index'
 	get 'categories', to: 'boardgames#categories'
 	get 'categories/:category_id', to: 'boardgames#category'
 
@@ -11,10 +10,10 @@ Rails.application.routes.draw do
 	get 'about', to: 'boardgames#about'
 
 	get 'login', to: 'users#login'
-	post 'login_user', to: 'users#login_user'
+	post 'login', to: 'users#login_user'
 
 	get 'signup', to: 'users#signup'
-	post 'signup', to: 'users#create_user'
+	post 'signup', to: 'users#signup_user'
 
 	get 'logout', to: 'users#logout'
 
