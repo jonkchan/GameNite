@@ -1,1 +1,9 @@
 <h1><%= @user.username %>'s Collection:</h1>
+
+<ul>
+    <% @user.collection.each do |bg| %>
+        <li>
+            <%= bg %>
+        </li>
+    <% end %>
+</ul>

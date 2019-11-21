@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 20191120033048) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.text "collection", default: "--- []\n"
-    t.text "wishlist", default: "--- []\n"
+    t.string "password_digest"
+    t.text "email"
+    t.text "collection"
+    t.text "wishlist"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

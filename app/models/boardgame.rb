@@ -1,6 +1,8 @@
 class Boardgame
+    attr_reader :id, :name
 
-    def initialize(name)
+    def initialize(id, name)
+        @id = id
         @name = name
     end
 
@@ -8,5 +10,4 @@ class Boardgame
       response = HTTParty.get('https://www.boardgameatlas.com/api/search?name=' + @name + '&client_id=Yz2YXIwfLt')
       @categories = response["games"]
     end
-
 end

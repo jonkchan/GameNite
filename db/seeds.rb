@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create({ username: 'jonC' })
-User.create({ username: 'justineC' })
+jon = User.create({ username: 'jonC', email: "jc@gmail.com", password: "test", collection: ["Catan", "Splendor"] })
+justine = User.create({ username: 'justinec', email: 'justine@gmail.com', password: "test", collection: ["Avalon"] })
+# jon.collection << "Catan"
+# jon.collection << "Splendor"
+# jon.save
