@@ -12,7 +12,6 @@ class UsersController < ApplicationController
             session[:user_id] = user.id
             redirect_to "/users/#{user.id}"
         else
-            puts 'failed login'
             redirect_to '/login'
         end
     end

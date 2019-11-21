@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'httparty', '~> 0.13.7'
 gem 'net_http_ssl_fix'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 gem 'jquery-rails'
 
 group :development, :test do
